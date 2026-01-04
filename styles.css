@@ -143,9 +143,6 @@ h1, h2, h3 {
 /* ==================== HERO ==================== */
 .hero {
     background-color: #f5efe6;
-    background-size: cover;
-    background-position: right center;
-    background-repeat: no-repeat;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -153,6 +150,22 @@ h1, h2, h3 {
     text-align: left;
     padding: 120px 24px 80px;
     position: relative;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.hero-image-mobile {
+    display: none;
 }
 
 .hero-content {
@@ -193,6 +206,7 @@ h1, h2, h3 {
     padding: 14px 28px;
     font-size: 0.9rem;
     margin-top: 8px;
+    border-radius: 50px;
 }
 
 .btn-hero:hover {
@@ -475,42 +489,55 @@ h1, h2, h3 {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    /* HERO MOBILE */
+    /* HERO MOBILE - Harris style: text on top, image below */
     .hero {
-        min-height: 100vh;
-        padding: 80px 20px 40px;
-        background-position: 70% top;
-        background-size: cover;
-        align-items: flex-end;
-        justify-content: center;
+        min-height: auto;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         text-align: center;
+        background-color: var(--white);
+    }
+
+    .hero-bg {
+        display: none;
     }
 
     .hero-content {
         margin-left: 0;
-        margin-bottom: 40px;
         max-width: 100%;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 30px 24px;
-        border-radius: 4px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        padding: 100px 24px 50px;
+        background: var(--white);
     }
 
     .hero-office {
-        font-size: 0.85rem;
+        font-size: 0.9rem;
+        letter-spacing: 0.15em;
     }
 
     .hero-name {
-        font-size: 3rem;
+        font-size: 3.5rem;
     }
 
     .hero-name-last {
-        margin-bottom: 20px;
+        margin-bottom: 24px;
     }
 
     .btn-hero {
-        padding: 12px 24px;
-        font-size: 0.85rem;
+        padding: 14px 32px;
+        font-size: 0.9rem;
+    }
+
+    .hero-image-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    .hero-image-mobile img {
+        width: 100%;
+        height: auto;
+        display: block;
     }
 
     /* ABOUT MOBILE */
