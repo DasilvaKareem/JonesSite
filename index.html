@@ -3,46 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jones for MSCS School Board - District 5</title>
+    <title>Jones for School Board - District 5</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <nav class="nav">
-            <div class="nav-brand">Jones for School Board</div>
+            <a href="#" class="nav-brand">JONES</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#why-running">Why I'm Running</a></li>
                 <li><a href="#priorities">Priorities</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact" class="nav-cta">Get Involved</a></li>
             </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
     <main>
         <section class="hero">
             <div class="hero-content">
-                <h1>Jones for School Board</h1>
-                <p class="hero-subtitle">Memphis-Shelby County Schools &bull; District 5</p>
-                <p class="hero-tagline">Every child. Every school. Every day.</p>
-                <a href="#why-running" class="btn btn-primary">Learn More</a>
+                <h1 class="hero-name">JONES</h1>
+                <p class="hero-office">FOR SCHOOL BOARD</p>
+                <div class="hero-divider"></div>
+                <p class="hero-district">MSCS District 5</p>
+            </div>
+        </section>
+
+        <section class="tagline-section">
+            <div class="container">
+                <p class="tagline">Every child. Every school. Every day.</p>
             </div>
         </section>
 
         <section id="about" class="section about">
             <div class="container">
-                <h2>About</h2>
                 <div class="about-content">
                     <div class="about-image">
-                        <!-- Placeholder for candidate photo -->
                         <div class="image-placeholder">
-                            <span>Photo Coming Soon</span>
+                            <span>PHOTO<br>COMING SOON</span>
                         </div>
                     </div>
                     <div class="about-text">
+                        <h2>ABOUT</h2>
                         <p>With over a decade of experience as an educator within Memphis-Shelby County Schools, I have dedicated my career to supporting students and teachers across our district.</p>
                         <p>As both a teacher and substitute, I've had the unique opportunity to step inside classrooms across multiple schools, listen to educators, support students, and see firsthand what is working and where support is needed.</p>
                         <p>My commitment to this district is both professional and personal—as an educator, a parent, and a grandparent with children currently enrolled in MSCS.</p>
@@ -53,7 +63,7 @@
 
         <section id="why-running" class="section why-running">
             <div class="container">
-                <h2>Why I'm Running</h2>
+                <h2>WHY I'M RUNNING</h2>
                 <div class="why-content">
                     <p class="lead">I am running because every child deserves to be seen, supported, and challenged—no exceptions.</p>
 
@@ -70,22 +80,22 @@
 
         <section id="priorities" class="section priorities">
             <div class="container">
-                <h2>Priorities</h2>
+                <h2>PRIORITIES</h2>
                 <div class="priorities-grid">
                     <div class="priority-card">
-                        <h3>Support All Learners</h3>
+                        <h3>SUPPORT ALL LEARNERS</h3>
                         <p>Ensure students with IEPs receive strong support and dignity, while continuing investment in AP and advanced programs.</p>
                     </div>
                     <div class="priority-card">
-                        <h3>Empower Educators</h3>
+                        <h3>EMPOWER EDUCATORS</h3>
                         <p>Advocate for policies that support teachers with the resources, training, and respect they deserve.</p>
                     </div>
                     <div class="priority-card">
-                        <h3>Family Engagement</h3>
+                        <h3>FAMILY ENGAGEMENT</h3>
                         <p>Strengthen partnerships between schools and families to create a unified support system for every child.</p>
                     </div>
                     <div class="priority-card">
-                        <h3>Close the Gaps</h3>
+                        <h3>CLOSE THE GAPS</h3>
                         <p>Work to ensure equitable access to resources, programs, and opportunities across all schools in the district.</p>
                     </div>
                 </div>
@@ -94,12 +104,11 @@
 
         <section id="contact" class="section contact">
             <div class="container">
-                <h2>Get Involved</h2>
-                <p>Join our campaign to put children first in Memphis-Shelby County Schools.</p>
-                <div class="contact-info">
-                    <p>Contact us to volunteer, request a yard sign, or share your ideas.</p>
-                    <!-- Add contact form or email here -->
-                    <a href="mailto:jones4mscs@email.com" class="btn btn-primary">Contact the Campaign</a>
+                <h2>GET INVOLVED</h2>
+                <p class="contact-intro">Join our campaign to put children first in Memphis-Shelby County Schools.</p>
+                <div class="contact-actions">
+                    <a href="mailto:jones4mscs@email.com" class="btn btn-primary">CONTACT US</a>
+                    <a href="#" class="btn btn-secondary">VOLUNTEER</a>
                 </div>
             </div>
         </section>
@@ -107,9 +116,21 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Jones for School Board - District 5</p>
-            <p class="footer-tagline">Every child. Every school. Every day.</p>
+            <div class="footer-brand">JONES FOR SCHOOL BOARD</div>
+            <p class="footer-district">Memphis-Shelby County Schools &bull; District 5</p>
+            <p class="footer-copy">&copy; 2025 Paid for by Jones for School Board</p>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
