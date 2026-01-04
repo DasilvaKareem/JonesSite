@@ -173,6 +173,9 @@ h1, h2, h3 {
     margin-left: 8%;
     position: relative;
     z-index: 2;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 50px;
+    backdrop-filter: blur(8px);
 }
 
 .hero-office {
